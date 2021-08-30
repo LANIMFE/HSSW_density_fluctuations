@@ -17,16 +17,6 @@ Program Main
   Implicit None
   Real * 8 :: phi, Tf, swlambda
   integer :: i1
-  !z=1.5d0
-  !phi=0.10d0
-  !Ti=5.d0
-  !Do i1=4000,7100,100
-  !phi=0.15d0
-  !Tf=1.4d0
-  !call Asympt_Quench_mobility_density_fluctuations_hs_hssw_2d_slab(phi,z)
-
-  Real * 8 :: phi, Tf, swlambda
-  integer :: i1
   logical :: writting_op
   Character :: writting_choice
   Write(*,*) "IMPORTANT MESSAGE:"
@@ -1273,7 +1263,7 @@ Contains
     s_params_f(1) = phi !Final phi
     s_params_f(2) = Tf !Final Temperature
     s_params_f(3) = z !Final length of square well
-    print*, Ti, Tf
+    print*,  Tf
 
     open(unit=12, file="sk_test.dat", status="Replace")
     Do i1 = 1, knp
@@ -1668,7 +1658,7 @@ Contains
     s_params_f(1) = phi !Final phi
     s_params_f(2) = Tf !Final Temperature
     s_params_f(3) = z !Final length of square well
-    print*, Ti, Tf
+    print*, Tf
 
     open(unit=12, file="sk_test.dat", status="Replace")
     Do i1 = 1, knp
